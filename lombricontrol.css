@@ -1,0 +1,746 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+.oculto {
+    display: none !important;
+}
+
+
+body.pagina-dashboard {
+    background-image: url('fondo_gris.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #d2cbcb;
+}
+
+.pagina-dashboard .app {
+    display: flex;
+    min-height: 100vh;
+}
+
+.pagina-dashboard main {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.pagina-dashboard header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body.pagina-login {
+    background: url('fondo.png') no-repeat center / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+}
+
+
+
+.pagina-dashboard aside {
+    width: 250px;
+    background-color: #000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 3.5rem;
+}
+
+.logo img {
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+.nav {
+    background-color: #735d3e;
+    border: none;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.nav:hover,
+.nav[aria-current="page"] {
+    background-color: #83a74d;
+}
+
+.exit {
+    margin-top: auto;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    padding: 1rem;
+}
+
+.exit svg {
+    width: 32px;
+    height: 32px;
+    stroke: white;
+}
+
+
+
+.pill {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.8rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #fbfbfb;
+}
+
+.pill.ok {
+    background-color: #000000;
+    color: white;
+}
+
+.pill.warn {
+    background-color: black;
+    color: white;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: black;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+.user i {
+    background-color: #72593b;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: bold;
+}
+
+
+.panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.panel > div {
+    background: rgb(9, 7, 7);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.panel h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.card {
+    margin-top: 1rem;
+}
+
+
+
+.track {
+    height: 20px;
+    background: #e0e0e0;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.bar {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(
+        to right,
+        #ee2687,
+        #ffed69,
+        #72e75a,
+        #ffed69,
+        #ee2687
+    );
+}
+
+.needle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: black;
+    transition: left 0.3s;
+}
+
+.scale {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.meter {
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.meter div {
+    height: 100%;
+    background-color: #81a84f;
+}
+
+
+.desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.desc h3 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.badge {
+    font-family: "Nunito", sans-serif;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.tip {
+    background-color: #34291c;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+
+
+.big {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+
+
+.pagina-dashboard .btn {
+    background-color: #735d3e;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.pagina-dashboard .btn:hover {
+    background-color: #83a74d;
+}
+
+
+
+.tasks {
+    grid-column: span 2;
+}
+
+.tasks ul {
+    list-style: none;
+}
+
+.tasks li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tasks input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.stamp {
+    grid-column: span 2;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #83a74d;
+    margin-top: 1rem;
+}
+
+.demo,
+dialog {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================================
+   10. LOGIN Y REGISTRO
+======================================== */
+
+.contenedor-login,
+.tarjeta-registro {
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.contenedor-login {
+    padding: 2.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.tarjeta-registro {
+    padding: 2.5rem 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 380px;
+    flex-shrink: 0;
+    transition: transform 0.4s ease;
+}
+
+.contenedor-login img,
+.tarjeta-registro img {
+    height: auto;
+}
+
+.contenedor-login img {
+    max-width: 120px;
+    margin-bottom: 1rem;
+}
+
+.tarjeta-registro img {
+    max-width: 90px;
+    margin-bottom: 0.5rem;
+}
+
+
+
+.contenedor-login h1,
+.contenedor-login h2,
+.contenedor-login button,
+.tarjeta-registro h1,
+.tarjeta-registro h2,
+.tarjeta-registro button,
+.btn-opcion,
+.btn-opcion-larga,
+.titulo-pregunta {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+}
+
+.contenedor-login h1,
+.tarjeta-registro h1,
+.titulo-pregunta {
+    color: #1e293b;
+}
+
+.contenedor-login h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.tarjeta-registro h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.contenedor-login h2,
+.tarjeta-registro h2 {
+    color: #315e25;
+    text-align: left;
+}
+
+.contenedor-login h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.tarjeta-registro h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.3rem;
+}
+
+
+/* ========================================
+   12. CAMPOS DE FORMULARIO
+======================================== */
+
+.contenedor-login input,
+.contenedor-login select,
+.tarjeta-registro input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.2rem;
+}
+
+.contenedor-login input,
+.contenedor-login select {
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background-color: #f8fafc;
+}
+
+.tarjeta-registro input {
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #e6e8d6;
+    color: #2c3e50;
+    outline: none;
+}
+
+.tarjeta-registro input::placeholder {
+    color: #8c9079;
+}
+
+.tarjeta-registro .input-interactivo {
+    cursor: pointer;
+}
+
+
+/* ========================================
+   13. BOTONES DEL LOGIN Y REGISTRO
+======================================== */
+
+.contenedor-login button,
+.btn-opcion,
+.btn-opcion-larga {
+    background-color: #72593b;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.contenedor-login button,
+.tarjeta-registro button {
+    width: 100%;
+    padding: 0.9rem;
+    border-radius: 6px;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.contenedor-login button {
+    background-color: #72593b;
+}
+
+.tarjeta-registro button {
+    background-color: #735d3e;
+    color: white;
+    border: none;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.contenedor-login button:hover,
+.tarjeta-registro button:hover,
+.btn-opcion-larga:hover {
+    background-color: #83a74d;
+}
+
+.btn-opcion,
+.btn-opcion-larga {
+    border-radius: 8px;
+    text-align: center;
+}
+
+.btn-opcion {
+    width: 100%;
+    padding: 12px 5px;
+    font-size: 1.6rem;
+}
+
+.btn-opcion-larga {
+    padding: 14px 20px;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.btn-opcion:hover {
+    transform: translateY(-2px);
+    background-color: #81a84f;
+}
+
+.btn-siguiente {
+    background: none;
+    border: none;
+    color: #2d2a2a;
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.btn-siguiente:hover {
+    color: #81a84f;
+}
+
+
+/* ========================================
+   14. MENSAJES Y ENLACES
+======================================== */
+
+.contenedor-login h3 {
+    color: #d0425c;
+    font-size: 0.85rem;
+    font-weight: 400;
+}
+
+.contenedor-login h3 a {
+    color: #d0425c;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contenedor-login h3 a:hover {
+    text-decoration: underline;
+}
+
+.tarjeta-registro h3 {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+.tarjeta-registro h3 a {
+    color: #e05263;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.mensaje {
+    padding: 0.7rem;
+    border-radius: 8px;
+    margin-bottom: 1.2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.mensaje-error {
+    background-color: #fde8ec;
+    color: #d0425c;
+}
+
+.mensaje-ok {
+    background-color: #e6f2dc;
+    color: #315e25;
+}
+
+
+/* ========================================
+   15. CONTENEDOR DEL REGISTRO
+======================================== */
+
+.layout-container {
+    display: flex;
+    gap: 25px;
+    align-items: stretch;
+    justify-content: center;
+    max-width: 1050px;
+    width: 100%;
+    transition: all 0.4s ease;
+}
+
+.layout-container.con-panel {
+    justify-content: flex-start;
+}
+
+
+
+.panel-preguntas {
+    background-color: #fff;
+    padding: 0;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    width: 0;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    opacity: 0;
+    transform: translateX(-30px);
+    pointer-events: none;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    max-height: 0;
+    overflow: hidden;
+}
+
+.panel-preguntas.activo {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+    visibility: visible;
+    max-height: 2000px;
+    width: 100%;
+    padding: 2.5rem;
+}
+
+.contador-paso {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.titulo-pregunta {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.descripcion-pregunta {
+    font-size: 0.8rem;
+    color: #555;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+}
+
+.pregunta-principal {
+    text-align: center;
+    color: #315e25;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.opciones-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.subtexto-opcion {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 4px;
+}
+
+.opciones-columna {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 1.5rem;
+}
+
+.info-recomendacion {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+    margin-bottom: 1rem;
+}
+
+.info-recomendacion img {
+    width: 130px;
+    height: auto;
+}
+
+.info-recomendacion p {
+    font-size: 1.25rem;
+    color: #333;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.footer-panel {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+}
+
+.flecha-icono {
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 12px solid #81a84f;
+    display: inline-block;
+}

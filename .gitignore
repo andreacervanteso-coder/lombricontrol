@@ -1,0 +1,15 @@
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración local (evita subir contraseñas reales)
+config.php
+.htaccess
+
+# Archivos temporales y logs
+*.log
+*.tmp
+
+# Carpetas de editores de código
+.vscode/
+.idea/
